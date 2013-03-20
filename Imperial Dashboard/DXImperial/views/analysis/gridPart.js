@@ -1,4 +1,4 @@
-﻿Imperial.View2 = function (params) {
+﻿DXImperial.gridPart = function (params) {
     var viewModel = {
         
     };

@@ -1,4 +1,4 @@
-<div data-dx-role="view" data-dx-name="Analysis" data-dx-title="Analysis">
+<div data-dx-role="view" data-dx-name="analysis" data-dx-title="Analysis">
     <div data-dx-target-placeholder="content" >
         <div data-bind="text:subTitle"></div>       
          <div data-bind="foreach:profitAnalysisList">

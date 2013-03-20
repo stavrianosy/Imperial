@@ -1,4 +1,4 @@
-﻿Imperial.DataAnalysis = function (params) {
+﻿DXImperial.analysis = function (params) {
 
     var profitAnalysis_1 = new Imperial.ProfitAnalysis();
     var profitAnalysis_2 = new Imperial.ProfitAnalysis();

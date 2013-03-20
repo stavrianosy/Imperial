@@ -13,9 +13,14 @@ window.DXImperial = $.extend(true, window.DXImperial, {
         "icon": "info"
       },
       {
-        "title": "Imperial",
-        "action": "#imperial",
-        "icon": "chart"
+          "title": "Imperial",
+          "action": "#imperial",
+          "icon": "chart"
+      },
+      {
+          "title": "Analysis",
+          "action": "#Analysis",
+          "icon": "chart"
       }
     ]
   }

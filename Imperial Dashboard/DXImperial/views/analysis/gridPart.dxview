@@ -1,4 +1,4 @@
-<div data-dx-role="view" data-dx-name="gridPart" data-dx-title="View2">
+<div data-dx-role="view" data-dx-name="gridPart" data-dx-title="Grids">
     <div data-dx-target-placeholder="content" style="position:relative;">
         <div data-bind="text:Company"></div>
         <div id="Container">

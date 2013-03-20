@@ -60,7 +60,28 @@
     <Content Include="viewmodels\CriteriaSelectorViewModel.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="viewmodels\ProfitAnalysisViewModel.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="views\about\about.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\analysis\analysis.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\analysis\analysis.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\analysis\analysis.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\analysis\gridPart.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\analysis\gridPart.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\analysis\gridPart.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="views\imperial\imperial.css">
@@ -100,6 +121,7 @@
     <Folder Include="models" />
     <Folder Include="viewmodels" />
     <Folder Include="views\" />
+    <Folder Include="views\analysis\" />
     <Folder Include="views\index" />
     <Folder Include="views\about" />
     <Folder Include="views\imperial" />
