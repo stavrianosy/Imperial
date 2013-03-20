@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>de7606cc-98cc-4981-9823-9a10c55b023f</ProjectGuid>
+    <AutoAssignPort>True</AutoAssignPort>
+    <RunInSimulator>True</RunInSimulator>
+    <ApplicationPage>app.html</ApplicationPage>
+    <Name>DXImperial</Name>
+    <RootNamespace>DXImperial</RootNamespace>
+    <KeyApkAlias>local_android_vs</KeyApkAlias>
+    <KeyApkPath>D:\Visual Studio Projects\Exelia\Imperial\Imperial Dashboard\CertConsole\android.p12</KeyApkPath>
+    <ApkDexFilePackageName>js.tmpl.xmlgfurm</ApkDexFilePackageName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app.js" />
+    <Content Include="app.html" />
+    <Content Include="app.css" />
+    <Content Include="css\dxtreme.android.holo-dark-12.2.css" />
+    <Content Include="css\dxtreme.desktop.default-12.2.css" />
+    <Content Include="css\dxtreme.ios.default-12.2.css" />
+    <Content Include="css\dxtreme.win8.black-12.2.css" />
+    <Content Include="css\dxtreme.win8.white-12.2.css" />
+    <Content Include="css\dxtreme.win8.black.small-12.2.css" />
+    <Content Include="data\db.js" />
+    <Content Include="js\jlinq.jquery.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\jlinq.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\knockout-2.2.1.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Navbar\NavbarLayout.css" />
+    <Content Include="layouts\Navbar\NavbarLayout.html" />
+    <Content Include="layouts\Navbar\NavbarLayout.js" />
+    <Content Include="js\dxtreme.core-12.2.js" />
+    <Content Include="js\dxtreme.framework-12.2.js" />
+    <Content Include="js\dxtreme.widgets-12.2.js" />
+    <Content Include="js\dxtreme.viz-12.2.js" />
+    <Content Include="js\globalize.js" />
+    <Content Include="js\jquery-1.7.2.intellisense.js" />
+    <Content Include="js\jquery-1.7.2.min.js" />
+    <Content Include="app.config.js" />
+    <Content Include="models\CompanyModel.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="models\DivisionModel.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="viewmodels\CriteriaSelectorViewModel.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\about\about.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\imperial\imperial.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\imperial\imperial.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\imperial\imperial.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\index\index.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\index\index.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\index\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\summaries\summaries.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\summaries\summaries.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\summaries\summaries.js">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\" />
+    <Folder Include="data\" />
+    <Folder Include="js\" />
+    <Folder Include="layouts\" />
+    <Folder Include="layouts\Navbar\" />
+    <Folder Include="models" />
+    <Folder Include="viewmodels" />
+    <Folder Include="views\" />
+    <Folder Include="views\index" />
+    <Folder Include="views\about" />
+    <Folder Include="views\imperial" />
+    <Folder Include="views\summaries" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <Target Name="Build">
+    <!--
+    <Message Text="'$(MSBuildToolsPath)'"></Message>
+    -->
+    <Message Text="Build JSProject '$(MSBuildProjectFile)':" Importance="high">
+    </Message>
+    <Message Text="Copying refenecses to output dir..." Importance="high" />
+    <MSBuild Targets="Build" Projects="@(ProjectReference)" Properties="OutputPath=$([System.IO.Path]::GetFullPath('$(OutputPath)'))">
+    </MSBuild>
+    <Message Text="Copying files to output dir..." Importance="high" />
+    <Copy SourceFiles="@(Content)" DestinationFiles="@(Content->'$(OutputPath)%(RelativeDir)%(Filename)%(Extension)')" />
+    <Message Text="Finished Build JSProject '$(MSBuildProjectFile)'." Importance="high">
+    </Message>
+  </Target>
+  <Target Name="CreateManifestResourceNames" Condition="'@(ResxWithNoCulture)@(ResxWithCulture)@(NonResxWithNoCulture)@(NonResxWithCulture)'!=''" />
+  <Target Name="Rebuild" DependsOnTargets="Clean;Build">
+  </Target>
+  <Target Name="Clean">
+    <!--
+    <Message Text="Cleaning Output files..." Importance="high" />
+    <Delete Files="@([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+    -->
+    <Message Text="Cleaning Output dir ($([System.IO.Path]::GetFullPath('$(OutputPath)')))..." Importance="high" />
+    <RemoveDir Directories="$([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+  </Target>
+</Project>
