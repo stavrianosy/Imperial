@@ -1,0 +1,31 @@
+﻿/* Put css styles for View2 view here */
+
+
+.boxTitle {
+    height:50px;
+    border-bottom:solid 1px black;
+}
+
+.categories {
+    width: 19.8%;
+    float: left;
+    border:solid 1px black;
+}
+.boxTitle_Top {
+    text-align:center;
+    padding:3px 0 3px 0;
+}
+.boxTitle_Bottom {
+    float:left;
+    width:33%;
+    text-align:center;
+}
+.textFormat {
+    padding-bottom:3px;
+}
+
+.gridValues {
+    float:left;
+    width:33%;
+    text-align:right;
+}
