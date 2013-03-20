@@ -81,6 +81,15 @@
     <Content Include="views\index\index.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="views\overlay\partialOverlay.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\overlay\partialOverlay.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\overlay\partialOverlay.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="views\summaries\summaries.css">
       <SubType>Content</SubType>
     </Content>
@@ -103,6 +112,7 @@
     <Folder Include="views\index" />
     <Folder Include="views\about" />
     <Folder Include="views\imperial" />
+    <Folder Include="views\overlay" />
     <Folder Include="views\summaries" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />

@@ -4,7 +4,7 @@
             <div data-bind="dxList: { dataSource: divisions, itemClick: selectedDivisionIndexChanged }">      
                 <div data-dx-name="item" data-dx-role="template">   
                     <span data-bind="text: $data.name"></span>
-                    <!--<div class="dx-field-value" data-bind="dxCheckbox: { checked: $data.selected, click: $root.selectAllCompanies }"></div>-->
+                    <div class="dx-field-value" data-bind="dxCheckbox: { checked: $data.selected }"></div>
                 </div>
            </div> 
         </div>     

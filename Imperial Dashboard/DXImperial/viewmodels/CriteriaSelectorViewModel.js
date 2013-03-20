@@ -3,43 +3,32 @@ function CriteriaSelectorViewModel() {
 
     self.divisions = DXImperial.db.getAllDivisionsWithCompanies();
     self.companies = ko.observableArray([]);
-    self.rangeDataSource = [];//ko.observableArray([]);
-    self.rangeSelectorOptions = ko.observable({
-        selectedRangeChanged: function (selectedRange) {
-            alert(selectedRange.startValue);
-        },
-        dataSource: self.rangeDataSource,
-        dataSourceField: 'x'
-    });
+    self.monthsRangeDataSource = DXImperial.db.getMonthsLookUpData;
+    self.yearsRangeDataSource = DXImperial.db.getYearsLookUpData;
+    self.quartersRangeDataSource = DXImperial.db.getQuartersLookUpData;
+    self.rangeSelectorOptions = ko.observable({});
     self.selectedDivision = ko.observable({});
     self.selectedYearRange = ko.observableArray([]);
     self.selectedMonthRange = ko.observableArray([]);
     self.selectedQuarters = ko.observableArray([]);
     self.selectedRadioForRange = ko.observable();
-    self.monthStartValue = 100;
-    self.monthEndValue = 200;
-    self.yearStartValue = "";
-    self.yearEndValue = "";
-    self.quarterStartValue = "";
-    self.quarterEndValue = "";
+    self.monthStartValue = self.monthsRangeDataSource[0];
+    self.monthEndValue = self.monthsRangeDataSource[self.monthsRangeDataSource.length - 1];
+    self.yearStartValue = self.yearsRangeDataSource[0];
+    self.yearEndValue = self.yearsRangeDataSource[self.yearsRangeDataSource.length - 1];
+    self.quarterStartValue = self.quartersRangeDataSource[0].Quarter;
+    self.quarterEndValue = self.quartersRangeDataSource[self.quartersRangeDataSource.length - 1].Quarter;
 
     self.selectedRadioForRange.subscribe(function (newValue) {
         switch (newValue) {
             case "MM":
-                //window.alert("MM");
-                self.rangeDataSource = [
-                    { x: 110, y: 45 },
-                    { x: 250, y: 30 },
-                    { x: 500, y: 24 },
-                    { x: 750, y: 69 },
-                    { x: 1000, y: 33 }];
                 self.rangeSelectorOptions({
                     selectedRangeChanged: function (selectedRange) {
                         self.monthStartValue = selectedRange.startValue;
                         self.monthEndValue = selectedRange.endValue;
                     },
-                    dataSource: self.rangeDataSource,
-                    dataSourceField: 'x',
+                    dataSource: self.monthsRangeDataSource,
+                    dataSourceField: 'Month',
                     selectedRange: {
                         startValue: self.monthStartValue,
                         endValue: self.monthEndValue
@@ -47,26 +36,34 @@ function CriteriaSelectorViewModel() {
                 });
                 break;
             case "YY":
-                //window.alert("YY");
-                self.rangeDataSource([
-                    { x: 100, y: 45 },
-                    { x: 150, y: 30 },
-                    { x: 200, y: 24 },
-                    { x: 250, y: 69 },
-                    { x: 300, y: 33 }]);
+                self.rangeSelectorOptions({
+                    selectedRangeChanged: function (selectedRange) {
+                        self.yearStartValue = selectedRange.startValue;
+                        self.yearEndValue = selectedRange.endValue;
+                    },
+                    dataSource: self.yearsRangeDataSource,
+                    dataSourceField: 'Year',
+                    selectedRange: {
+                        startValue: self.yearStartValue,
+                        endValue: self.yearEndValue
+                    }
+                });
                 break;
             case "Q":
-                //window.alert("Q");
-                self.rangeDataSource([
-                    { x: 5, y: 45 },
-                    { x: 25, y: 30 },
-                    { x: 50, y: 24 },
-                    { x: 75, y: 69 },
-                    { x: 100, y: 33 }]);
+                self.rangeSelectorOptions({
+                    selectedRangeChanged: function (selectedRange) {
+                        self.quarterStartValue = selectedRange.startValue;
+                        self.quarterEndValue = selectedRange.endValue;
+                    },
+                    dataSource: self.quartersRangeDataSource,
+                    dataSourceField: 'Id',
+                    selectedRange: {
+                        startValue: self.quarterStartValue,
+                        endValue: self.quarterEndValue
+                    }
+                });
                 break;
             default:
-                //self.rangeDataSource([]);
-                //window.alert(newValue);
                 break;
         }
 

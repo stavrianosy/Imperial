@@ -16,6 +16,11 @@ window.DXImperial = $.extend(true, window.DXImperial, {
         "title": "Imperial",
         "action": "#imperial",
         "icon": "chart"
+      },
+      {
+        "title": "partialOverlay",
+        "action": "#partialOverlay",
+        "icon": "partialoverlay"
       }
     ]
   }
