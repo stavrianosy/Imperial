@@ -1,0 +1,154 @@
+<div data-dx-role="view" data-dx-name="gridPart" data-dx-title="Grids">
+    <div data-dx-target-placeholder="content" style="position:relative;">
+        <div data-bind="text:Company"></div>
+        <div id="Container">
+            <div class="categories">
+                <div class="boxTitle"></div>
+                <div class="textFormat">Revenue</div>
+                <div class="textFormat">Operating Profit</div>
+                <div class="textFormat">Profit Before Tax</div>
+                <div class="textFormat">Operating Profit Margin</div>                
+            </div>
+            <div class="categories">
+                <div class="boxTitle">
+                    <div class="boxTitle_Top">Month</div>
+                    <div>
+                        <div class="boxTitle_Bottom">Actual</div>
+                        <div class="boxTitle_Bottom">Budget</div>
+                        <div class="boxTitle_Bottom">Last</div>
+                        <div style="clear:both"></div>
+                    </div>
+                </div>
+                    <div class="textFormat">
+                        <div class="gridValues" data-bind=text:Revenue_Month_Actual></div>
+                        <div class="gridValues" data-bind=text:Revenue_Month_Budget></div>
+                        <div class="gridValues" data-bind=text:Revenue_Month_Last></div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="textFormat">
+                        <div class="gridValues" data-bind=text:Revenue_YTD_Actual></div>
+                        <div class="gridValues" data-bind=text:Revenue_YTD_Budget></div>
+                        <div class="gridValues" data-bind=text:Revenue_YTD_Last></div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="textFormat">
+                        <div class="gridValues" data-bind=text:Revenue_December_Actual></div>
+                        <div class="gridValues" data-bind=text:Revenue_December_Budget></div>
+                        <div class="gridValues" data-bind=text:Revenue_December_Last></div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="textFormat">
+                        <div class="gridValues" data-bind=text:Revenue_Forecast_Actual></div>
+                        <div class="gridValues" data-bind=text:Revenue_Forecast_Budget></div>
+                        <div class="gridValues" data-bind=text:Revenue_Forecast_Last></div>
+                        <div style="clear:both;"></div>
+                    </div>
+            </div>
+            <div class="categories">
+                <div class="boxTitle">
+                    <div class="boxTitle_Top">YTD</div>
+                    <div>
+                        <div class="boxTitle_Bottom">Actual</div>
+                        <div class="boxTitle_Bottom">Budget</div>
+                        <div class="boxTitle_Bottom">Last</div>
+                        <div style="clear:both"></div>
+                    </div>
+                </div>
+                    <div class="textFormat">
+                        <div class="gridValues" data-bind=text:OpProfit_Month_Actual></div>
+                        <div class="gridValues" data-bind=text:OpProfit_Month_Budget></div>
+                        <div class="gridValues" data-bind=text:OpProfit_Month_Last></div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="textFormat">
+                        <div class="gridValues" data-bind=text:OpProfit_YTD_Actual></div>
+                        <div class="gridValues" data-bind=text:OpProfit_YTD_Budget></div>
+                        <div class="gridValues" data-bind=text:OpProfit_YTD_Last></div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="textFormat">
+                        <div class="gridValues" data-bind=text:OpProfit_December_Actual></div>
+                        <div class="gridValues" data-bind=text:OpProfit_December_Budget></div>
+                        <div class="gridValues" data-bind=text:OpProfit_December_Last></div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="textFormat">
+                        <div class="gridValues" data-bind=text:OpProfit_Forecast_Actual></div>
+                        <div class="gridValues" data-bind=text:OpProfit_Forecast_Budget></div>
+                        <div class="gridValues" data-bind=text:OpProfit_Forecast_Last></div>
+                        <div style="clear:both;"></div>
+                    </div>
+            </div>
+            <div class="categories">
+                <div class="boxTitle">
+                    <div class="boxTitle_Top">December</div>
+                    <div>
+                        <div class="boxTitle_Bottom">Actual</div>
+                        <div class="boxTitle_Bottom">Budget</div>
+                        <div class="boxTitle_Bottom">Last</div>
+                        <div style="clear:both"></div>
+                    </div>
+                </div>
+                    <div class="textFormat">
+                        <div class="gridValues" data-bind=text:ProfitBeforeTax_Month_Actual></div>
+                        <div class="gridValues" data-bind=text:ProfitBeforeTax_Month_Budget></div>
+                        <div class="gridValues" data-bind=text:ProfitBeforeTax_Month_Last></div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="textFormat">
+                        <div class="gridValues" data-bind=text:ProfitBeforeTax_YTD_Actual></div>
+                        <div class="gridValues" data-bind=text:ProfitBeforeTax_YTD_Budget></div>
+                        <div class="gridValues" data-bind=text:ProfitBeforeTax_YTD_Last></div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="textFormat">
+                        <div class="gridValues" data-bind=text:ProfitBeforeTax_December_Actual></div>
+                        <div class="gridValues" data-bind=text:ProfitBeforeTax_December_Budget></div>
+                        <div class="gridValues" data-bind=text:ProfitBeforeTax_December_Last></div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="textFormat">
+                        <div class="gridValues" data-bind=text:ProfitBeforeTax_Forecast_Actual></div>
+                        <div class="gridValues" data-bind=text:ProfitBeforeTax_Forecast_Budget></div>
+                        <div class="gridValues" data-bind=text:ProfitBeforeTax_Forecast_Last></div>
+                        <div style="clear:both;"></div>
+                    </div>
+            </div>
+            <div class="categories">
+                <div class="boxTitle">
+                    <div class="boxTitle_Top">Forecast - Full Year</div>
+                    <div>
+                        <div class="boxTitle_Bottom">Actual</div>
+                        <div class="boxTitle_Bottom">Budget</div>
+                        <div class="boxTitle_Bottom">Last</div>
+                        <div style="clear:both"></div>
+                    </div>
+                </div>
+                    <div class="textFormat">
+                        <div class="gridValues" data-bind="text:OpProfitMargin_Month_Actual"></div>
+                        <div class="gridValues" data-bind="text:OpProfitMargin_Month_Budget"></div>
+                        <div class="gridValues" data-bind="text:OpProfitMargin_Month_Last"></div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="textFormat">
+                        <div class="gridValues" data-bind=text:OpProfitMargin_YTD_Actual></div>
+                        <div class="gridValues" data-bind=text:OpProfitMargin_YTD_Budget></div>
+                        <div class="gridValues" data-bind=text:OpProfitMargin_YTD_Last></div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="textFormat">
+                        <div class="gridValues" data-bind=text:OpProfitMargin_December_Actual></div>
+                        <div class="gridValues" data-bind=text:OpProfitMargin_December_Budget></div>
+                        <div class="gridValues" data-bind=text:OpProfitMargin_December_Last></div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="textFormat">
+                        <div class="gridValues" data-bind=text:OpProfitMargin_Forecast_Actual></div>
+                        <div class="gridValues" data-bind=text:OpProfitMargin_Forecast_Budget></div>
+                        <div class="gridValues" data-bind=text:OpProfitMargin_Forecast_Last></div>
+                        <div style="clear:both;"></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
