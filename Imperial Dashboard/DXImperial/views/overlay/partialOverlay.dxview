@@ -1,0 +1,13 @@
+<div data-dx-role="view" data-dx-name="partialOverlay" data-dx-title="partialOverlay">
+    <div data-dx-target-placeholder="content" >
+        <div id="showButton" data-bind="dxButton: { text: showText, click: showOverlay }"></div>
+        <div id="overlay" data-bind="dxOverlay: { }">
+            <div data-bind="text: message"></div>
+             <div id="hideButton" data-bind="dxButton: { text: hideText, click: hideOverlay }"></div>
+             <div data-dx-render-partial="imperial"></div>
+                <div>
+                    <!-- View contents -->
+                </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿/// <reference path="../js/jquery-1.7.2.min.js"; />
 /// <reference path="../js/knockout-2.2.1.js"; />
 /// <reference path="../js/dxtreme.core-12.2.js"; />
